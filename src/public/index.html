@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/chat-code/resource/css/bootstrap" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div id="app-chat">
+      <div class="navbar bg-info px-2 fixed-top">
+        <span class="h5 text-white">Mi Chat</span>
+        <span class="text-white h5" >{{connectUser}}</span>
+        <button class="btn btn-danger">Salir X</button>
+      </div>
+      <div class="col-sm-12 pt-3">
+        <div class="col-sm-12 mt-5 py-2">
+          <div class="row mx-0">
+            <div v-for="message in chat" class="col-sm-12 px-2">
+                <div class="col-sm-12 py-1">
+                <span>{{message.name}}</span>
+              </div>
+              <div class="message-chat bg-success px-4 py-2 position-relative">
+                <span class="bg-success text-white rounded">
+                    {{message.message}}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed-bottom">
+        <div class="row">
+          <div class="col-sm-11 px-0">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Escribe mensaje"
+              v-model="message"
+            />
+          </div>
+          <div class="col-sm-1 px-0">
+            <button
+              class="btn btn-primary form-control"
+              v-on:click="sendMessage"
+            >
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/chat-code/resource/js/chat"></script>
+  </body>
+</html>

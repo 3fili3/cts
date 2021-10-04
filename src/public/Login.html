@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/chat-code/resource/css/bootstrap" />
+    <title>Identificate</title>
+  </head>
+  <body>
+    <div class="col-sm-12 px-0" id="app">
+      <div class="row mx-0">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 p-0 mt-3 shadow-lg">
+          <div class="col-sm-12 p-2 bg-primary">
+            <span class="h5 text-white">Identificate</span>
+          </div>
+          <div class="col-sm-12 p-2">
+            <div class="col-sm-12">
+              <span>Crea Alias:</span>
+              <input
+                type="text" v-model="alias"
+                class="form-control"
+                placeholder="Escribe tu Alias"
+              />
+              <div class="text-end py-2">
+                <button class="btn btn-success" v-on:click="accessChat">Ingresar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/chat-code/resource/js/auth"></script>
+    
+  </body>
+</html>
