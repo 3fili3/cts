@@ -26,7 +26,7 @@ const app = new Vue({
     },
     async initConnection() {
       if (this.ws === null) {
-        this.ws = new WebSocket("ws://localhost:4001");
+        this.ws = new WebSocket("https://appscodeathome.ovh/socket");
       }
       this.ws.onopen = () => {
         const newMessage = {
